@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Pattern Detective 🕵️‍♀️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+
+        <!-- Intro Screen -->
+        <div id="intro-container">
+    <header>
+      <h1>Dark Pattern Detective</h1>
+                <p>Spot the sneaky, fix the tricky 🔍</p>
+    </header>
+            <h2>Hey there, UX sleuth!</h2>
+            <p>Ready to bust some shady design tactics? In this game, you'll encounter 10 examples of UX trickery that make users do things they don't really want to.</p>
+            <ol>
+                <li>Check out each screen and find the dark pattern (that's 1 point)</li>
+                <li>Pick the best way to make it user-friendly (that's another point)</li>
+                <li>Learn why these patterns are problematic (and how to fix them)</li>
+      </ol>
+            <p>Can you spot all the sneaky tricks? Just click on the component you think is trying to trick you!</p>
+            <button id="start-btn" class="button btn-primary btn-lg">Let's start</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-container" style="display: none;">
+            <div class="game-header">
+                <div class="score-display">Score: <span id="score">0</span> / 20</div>
+                <div class="progress-display">Pattern: <span id="current-pattern">1</span> / 10</div>
+            </div>
+            <div class="game-content">
+                <div class="pattern-info">
+                    <h3 id="pattern-name">Pattern name here</h3>
+                    <p id="pattern-description">Scenario description goes here.</p>
+                </div>
+                
+                <!-- Interactive UI Mockup Area -->
+                <div id="scenario-container">
+                    <!-- Mockup HTML will be injected here by JS -->
+                </div>
+                
+                <!-- Options and Feedback Area -->
+                <div id="options-container" style="display: none;">
+                    <h4>How would you fix this?</h4>
+                    <select id="fix-options">
+                        <option value="" disabled selected>Pick the best solution...</option>
+                        <!-- Options added by JS -->
+                    </select>
+                    <div class="action-buttons">
+                        <button id="submit-btn" class="button btn-primary">Submit answer</button>
+                        <button id="give-up-btn" class="button btn-secondary">Reveal answer</button>
+                  </div>
+                    <div id="feedback" class="feedback" style="display: none;">
+                        <!-- Feedback message shown here -->
+                </div>
+                    <button id="next-btn" class="button btn-primary" style="display: none;">Next pattern</button>
+                </div>
+            </div>
+          </div>
+
+        <!-- Results Screen -->
+        <div id="results-container" style="display: none;">
+            <h2>Case closed!</h2>
+            <div class="score-summary">
+                Your score: <span id="final-score">0</span> / 20
+            </div>
+            <p id="score-message">Score analysis message goes here.</p>
+            <button id="restart-btn" class="button btn-primary btn-lg">Start again</button>
+              </div>
+              
+    </div> <!-- /container -->
+
+    <script src="script.js"></script>
+</body>
+</html>
